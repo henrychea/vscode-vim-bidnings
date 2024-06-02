@@ -1,0 +1,103 @@
+[
+  // MacOS Unbind Enter from Rename File in File Tree
+  {
+    "key": "enter",
+    "command": "-renameFile",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  // Focus File Tree
+  {
+    "key": "space e",
+    "command": "workbench.files.action.focusFilesExplorer",
+    "when": "!workbench.files.action.focusFilesExplorer && !inputFocus"
+  },
+  // File Tree Motions
+  {
+    "key": "r",
+    "command": "renameFile",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "a",
+    "command": "explorer.newFile",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
+    "key": "d",
+    "command": "deleteFile",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
+    "key": "x",
+    "command": "filesExplorer.cut",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
+    "key": "p",
+    "command": "filesExplorer.paste",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
+    "key": "y",
+    "command": "filesExplorer.copy",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  // Go Back to File From Sidebar
+  {
+    "key": "escape",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "sideBarFocus"
+  },
+
+  {
+    "key": "ctrl+c",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "sideBarFocus"
+  },
+  // Open Folder
+  {
+    "key": "space f o",
+    "command": "workbench.action.files.openFolderViaWorkspace",
+    "when": "!inputFocus && sideBarFocus"
+  },
+  // Find File
+  {
+    "key": "space space",
+    "command": "workbench.action.quickOpen",
+    "when": "!inputFocus && sideBarFocus"
+  },
+  // Open/Close Terminal
+  {
+    "key": "`",
+    "command": "workbench.action.terminal.toggleTerminal",
+    "when": "terminal.active && vim.mode != 'Insert'"
+  },
+  // Open Extensions
+  {
+    "key": "space x x",
+    "command": "workbench.view.extensions",
+    "when": "!inputFocus"
+  },
+  // Open Source Control
+  {
+    "key": "space g g",
+    "command": "workbench.view.scm",
+    "when": "!inputFocus"
+  },
+  // System Redo
+  {
+    "key": "ctrl+r",
+    "command": "redo"
+  },
+  // Close Hover definition on any key press
+  {
+    "key": "j",
+    "when": "editorHoverFocused",
+    "command": "workbench.action.focusActiveEditorGroup"
+  },
+  {
+    "key": "ctrl+c",
+    "when": "editorHoverFocused",
+    "command": "workbench.action.focusActiveEditorGroup"
+  }
+]
