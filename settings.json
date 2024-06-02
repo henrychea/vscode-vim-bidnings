@@ -1,0 +1,207 @@
+{
+  // Begin Vim Settings
+  "vim.easymotion": false,
+  "vim.incsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": true,
+  "vim.hlsearch": true,
+  "vim.highlightedyank.enable": true,
+  "vim.highlightedyank.duration": 50,
+  "vim.leader": "<space>",
+  "vim.handleKeys": {
+    "<C-a>": false,
+    "<C-f>": false,
+    "<C-w>": false,
+    "<C-s>": true,
+    "<C-b>": false
+  },
+  // Vim Statusbar Colors
+  "vim.statusBarColorControl": false,
+
+  // Vim Keybindings
+  "vim.normalModeKeyBindingsNonRecursive": [
+    // Open/Close Sidebar
+    {
+      "before": ["<Leader>", "o"],
+      "commands": ["workbench.action.toggleSidebarVisibility"]
+    },
+    // Focus File Tree
+    {
+      "before": ["<Leader>", "e"],
+      "commands": ["workbench.explorer.fileView.focus"]
+    },
+    // Open Folder
+    {
+      "before": ["<Leader>", "f", "o"],
+      "commands": ["workbench.action.files.openFolderViaWorkspace"]
+    },
+    // Find File
+    {
+      "before": ["<Leader>", "<Leader>"],
+      "commands": ["workbench.action.quickOpen"]
+    },
+    // Open Extensions
+    {
+      "before": ["<Leader>", "x", "x"],
+      "commands": ["workbench.view.extensions"]
+    },
+    // Open Source Control
+    {
+      "before": ["<Leader>", "g", "g"],
+      "commands": ["workbench.view.scm"]
+    },
+    // Format Code
+    {
+      "before": ["<Leader>", "c", "f"],
+      "commands": ["editor.action.formatDocument"],
+      "silent": true
+    },
+    {
+      "before": ["<Leader>", "c", "o"],
+      "commands": ["editor.action.organizeImports"],
+      "silent": true
+    },
+    {
+      "before": ["<Leader>", "c", "A"],
+      "commands": ["editor.action.fixAll"],
+      "silent": true
+    },
+    // Quick Fix
+    {
+      "before": ["<Leader>", "c", "a"],
+      "commands": ["editor.action.quickFix"],
+      "silent": true
+    },
+    // Clear Highlight
+    {
+      "before": ["<Esc>"],
+      "after": ["<Esc>"],
+      "commands": [":nohl"],
+      "silent": true
+    },
+    // System undo
+    {
+      "before": ["u"],
+      "commands": ["undo"]
+    },
+    // Scroll and Center
+    {
+      "before": ["ctrl+u"],
+      "after": ["ctrl+u", "z", "z"]
+    },
+    {
+      "before": ["ctrl+d"],
+      "after": ["ctrl+d", "z", "z"]
+    },
+    // Center on Search
+    {
+      "before": ["n"],
+      "after": ["n", "z", "z"]
+    },
+    {
+      "before": ["N"],
+      "after": ["N", "z", "z"]
+    },
+    // Save file
+    {
+      "before": ["<C-s>"],
+      "after": ["<Esc>"],
+      "commands": ["workbench.action.files.save"],
+      "silent": true
+    },
+    // Window Controls
+    {
+      "before": ["<C-right>"],
+      "commands": ["workbench.action.focusRightGroup"],
+      "silent": true
+    },
+    {
+      "before": ["<C-left>"],
+      "commands": ["workbench.action.focusLeftGroup"],
+      "silent": true
+    },
+    {
+      "before": ["<C-down>"],
+      "commands": ["workbench.action.focusBelowGroup"],
+      "silent": true
+    },
+    {
+      "before": ["<C-up>"],
+      "commands": ["workbench.action.focusAboveGroup"],
+      "silent": true
+    },
+    // Tab Controls
+    {
+      "before": ["<S-l>"],
+      "commands": ["workbench.action.nextEditorInGroup"],
+      "silent": true
+    },
+    {
+      "before": ["<S-h>"],
+      "commands": ["workbench.action.previousEditorInGroup"],
+      "silent": true
+    },
+    {
+      "before": ["<Leader>", "b", "d"],
+      "commands": ["workbench.action.closeActiveEditor"],
+      "silent": true
+    },
+    {
+      "before": ["<Leader>", "b", "o"],
+      "commands": ["workbench.action.closeOtherEditors"],
+      "silent": true
+    },
+    {
+      "before": ["<Leader>", "b", "l"],
+      "commands": ["workbench.action.closeEditorsToTheLeft"],
+      "silent": true
+    },
+    {
+      "before": ["<Leader>", "b", "r"],
+      "commands": ["workbench.action.closeEditorsToTheRight"],
+      "silent": true
+    },
+    // LSP Related
+    {
+      "before": ["g", "d"],
+      "commands": ["editor.action.revealDefinition"],
+      "silent": true
+    },
+    {
+      "before": ["g", "D"],
+      "commands": ["editor.action.goToTypeDefinition"],
+      "silent": true
+    },
+    {
+      "before": ["g", "r"],
+      "commands": ["editor.action.goToReferences"],
+      "silent": true
+    },
+    {
+      "before": ["<Leader>", "c", "r"],
+      "commands": ["editor.action.rename"],
+      "silent": true
+    },
+    {
+      "before": ["K"],
+      "commands": ["editor.action.showDefinitionPreviewHover"],
+      "silent": true
+    }
+  ],
+
+  "vim.insertModeKeyBindingsNonRecursive": [
+    // Clear Highlight
+    {
+      "before": ["<Esc>"],
+      "after": ["<Esc>"],
+      "commands": [":nohl"],
+      "silent": true
+    },
+    {
+      "before": ["<C-s>"],
+      "after": ["<Esc>"],
+      "commands": ["workbench.action.files.save"],
+      "silent": true
+    }
+  ],
+}
